@@ -1,17 +1,20 @@
 # How to use this template repo
 
 - Replace `PROJECT_NAM` and `PROJECT_DESCRIPTION` with a find and replace command.
+- Replace `otlin-open-source-template` with a find and replace command.
 - Replace `mylib` with a find and replace command.
 - Replace `mylib` folders.
 
 ## Features
 
-- [x] Continuous-on-demand integration and deployment.
+- [x] Continuous-on-demand integration and deployment to maven repository.
 - [x] Documentation (with versionning) website.
 
-![JVM Continuous Integration](https://github.com/bamlab/PROJECT_NAME/workflows/JVM%20Continuous%20Integration/badge.svg)
+# PROJECT_NAME
 
-![JVM Continuous Deployment](https://github.com/bamlab/PROJECT_NAME/workflows/JVM%20Continuous%20Deployment/badge.svg)
+![JVM Continuous Integration](https://github.com/bamlab/kotlin-open-source-template/workflows/JVM%20Continuous%20Integration/badge.svg)
+
+![JVM Continuous Deployment](https://github.com/bamlab/kotlin-open-source-template/workflows/JVM%20Continuous%20Deployment/badge.svg)
 
 ## Install
 
