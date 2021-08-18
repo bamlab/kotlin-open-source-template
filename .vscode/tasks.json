@@ -1,0 +1,17 @@
+{
+  // Default build task for documentation website
+  // Requires `mkdocs` to be installed !
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "serve",
+      "type": "shell",
+      "command": "mkdocs serve",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

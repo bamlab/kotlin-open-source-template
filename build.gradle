@@ -1,0 +1,63 @@
+buildscript {
+    apply from: "./gradle/versions.gradle"
+
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        // Kotlin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Dokka
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_version"
+        // Gradle-Nexus
+        classpath "io.github.gradle-nexus:publish-plugin:$gradle_nexus_version"
+    }
+}
+
+wrapper {
+    distributionType = Wrapper.DistributionType.ALL
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+    }
+
+    group = "tech.bam.PROJECT_NAME"
+    version = "$PROJECT_NAME_version"
+
+    // Dokka
+    apply plugin: "org.jetbrains.dokka"
+
+    task dokkaJar(type: Jar) {
+        classifier = "javadoc"
+        from dokkaJavadoc
+    }
+}
+
+// Dokka
+apply plugin: "org.jetbrains.dokka"
+
+dokkaHtmlMultiModule.configure {
+    outputDirectory.set(file("build/dokkaMultiModuleOutput"))
+}
+
+// Gradle-Nexus
+apply plugin: "io.github.gradle-nexus.publish-plugin"
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            stagingProfileId = "tech.bam"
+            username = properties["sonatypeUsername"].toString()
+            password = properties["sonatypePassword"].toString()
+        }
+    }
+}
