@@ -12,9 +12,9 @@
 
 # PROJECT_NAME
 
-![JVM Continuous Integration](https://github.com/bamlab/kotlin-open-source-template/workflows/JVM%20Continuous%20Integration/badge.svg)
+![JVM Release](https://github.com/bamlab/kotlin-open-source-template/workflows/JVM%20Release/badge.svg)
 
-![JVM Continuous Deployment](https://github.com/bamlab/kotlin-open-source-template/workflows/JVM%20Continuous%20Deployment/badge.svg)
+![Continuous Deployment](https://github.com/bamlab/kotlin-open-source-template/workflows/Continuous%20Deployment/badge.svg)
 
 ## Install
 
